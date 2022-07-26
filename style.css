@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--red);
+  background-image: url(/images/bg-intro-desktop.png);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+section.text {
+  color: white;
+}
+
+section.text h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+section.text p {
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.try {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 1.3rem 0;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 3rem 3rem 4rem 3rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+input {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 4px;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: gray;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: white;
+  font-weight: 700;
+  padding: 1.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin-top: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+.terms {
+  text-align: center;
+  color: var(--grayish-blue);
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.first-error,
+.last-error,
+.email-error,
+.pass-error {
+  display: none;
+}
+
+.error {
+  text-align: end;
+  font-size: 1.2rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+.error-icon {
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    max-width: 370px;
+    grid-template-columns: 1fr;
+  }
+
+  section.text {
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  section.text h1 {
+    font-size: 3rem;
+  }
+
+  section.text p {
+    font-size: 1.4rem;
+  }
+
+  section.form {
+    padding-bottom: 5rem;
+  }
+
+  .try {
+    padding: 2rem 6rem;
+  }
+}

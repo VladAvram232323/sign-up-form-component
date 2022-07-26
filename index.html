@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <section class="text">
+        <h1>
+          Learn to code by <br />
+          watching others
+        </h1>
+        <p>
+          See how experienced developers solve problems in real-time. <br />
+          Watching scripted tutorials is great, but understanding how <br />
+          developers think is invaluable.
+        </p>
+      </section>
+
+      <section class="form">
+        <div class="try">
+          <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+        </div>
+
+        <form action="/" id="form" class="free-trial">
+          <label for="first name"></label>
+          <input id="first" class="" type="text" placeholder="First Name" />
+          <div class="first-error error">First Name cannot be empty</div>
+
+          <label for="last name"></label>
+          <input id="last" class="" type="text" placeholder="Last Name" />
+          <div class="last-error error">Last Name cannot be empty</div>
+
+          <label for="email"></label>
+          <input id="email" class="" type="email" placeholder="Email Address" />
+          <div class="email-error error">Looks like this is not an email</div>
+
+          <label for="Password"></label>
+          <input
+            id="password"
+            class=""
+            type="password"
+            placeholder="Password"
+          />
+          <div class="pass-error error">Password cannot be empty</div>
+
+          <button type="submit" class="submit">CLAIM YOUR FREE TRIAL</button>
+
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
